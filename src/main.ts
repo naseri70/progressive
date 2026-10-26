@@ -15,7 +15,10 @@ const canvas = document.getElementById('app') as HTMLCanvasElement | null;
 const fallback = document.getElementById('webgl-fallback');
 
 if (!canvas || !isWebGLAvailable()) {
-  if (fallback) fallback.hidden = false;
+  if (fallback) {
+    fallback.hidden = false;
+    fallback.textContent = `WebGL is not available in this browser. ${navigator.userAgent}`;
+  }
   if (canvas) canvas.style.display = 'none';
   throw new Error('WebGL is not available');
 }

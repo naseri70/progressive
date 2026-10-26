@@ -2,8 +2,20 @@ import * as THREE from 'three';
 
 export function isWebGLAvailable(): boolean {
   try {
+    if (typeof window.WebGLRenderingContext === 'undefined' && typeof WebGLRenderingContext === 'undefined') {
+      return false;
+    }
     const canvas = document.createElement('canvas');
-    return !!(canvas.getContext('webgl') || canvas.getContext('experimental-webgl'));
+    const contexts = ['webgl2', 'webgl', 'experimental-webgl'] as const;
+    for (const name of contexts) {
+      try {
+        const gl = canvas.getContext(name);
+        if (gl) return true;
+      } catch {
+        // Try next context name.
+      }
+    }
+    return false;
   } catch {
     return false;
   }
