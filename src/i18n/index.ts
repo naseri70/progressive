@@ -24,6 +24,11 @@ const resources: I18nResources = {
     nearExplanation: 'بخش پایینی عدسی توان اضافی مورد نیاز برای مطالعه و کارهای نزدیک را فراهم می‌کند.',
     illustrative: 'تصویرسازی آموزشی — ابعاد و توان دقیق عدسی نیست.',
     fallback: 'مرورگر شما از WebGL پشتیبانی نمی‌کند. لطفاً مرورگر یا دستگاه دیگری را امتحان کنید.',
+    frontView: 'نمای روبرو',
+    angledView: 'نمای زاویه‌دار',
+    changeView: 'تغییر نما',
+    pauseGuided: 'توقف',
+    resumeGuided: 'ادامه',
     distanceTarget: 'تابلو راهنمایی در دور',
     intermediateTarget: 'مانیتور کامپیوتر',
     nearTarget: 'کتاب یا تلفن همراه'
@@ -51,6 +56,11 @@ const resources: I18nResources = {
     nearExplanation: 'The lower part of the lens provides the additional optical power commonly needed for reading and other close work.',
     illustrative: 'Illustrative educational visualization — not exact lens dimensions or optical power.',
     fallback: 'Your browser does not support WebGL. Please try another browser or device.',
+    frontView: 'Front View',
+    angledView: 'Angled View',
+    changeView: 'Change View',
+    pauseGuided: 'Pause',
+    resumeGuided: 'Resume',
     distanceTarget: 'Road sign in the distance',
     intermediateTarget: 'Computer monitor',
     nearTarget: 'Book or smartphone'
