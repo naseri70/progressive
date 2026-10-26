@@ -1,18 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa" dir="rtl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Three.js Progressive</title>
-    <style>
-      html, body { margin: 0; height: 100%; overflow: hidden; background: #000; }
-      #app { width: 100%; height: 100%; display: block; }
-      #info { position: absolute; top: 10px; left: 10px; color: #fff; font-family: sans-serif; font-size: 14px; }
-    </style>
+    <title>شبیه‌ساز آموزشی عدسی پروگرسیو</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/src/styles/main.css" />
   </head>
   <body>
-    <div id="info">Three.js starter (Vite)</div>
-    <canvas id="app"></canvas>
-    <script type="module" src="/src/main.js"></script>
+    <header class="topbar">
+      <div class="title-group">
+        <h1 id="title">شبیه‌ساز آموزشی عدسی پروگرسیو</h1>
+        <p id="subtitle">عدسی پروگرسیو چگونه در فاصله‌های مختلف کار می‌کند؟</p>
+      </div>
+      <div class="top-actions">
+        <button id="btn-lang" type="button">English</button>
+        <button id="btn-reset" type="button">بازنشانی نما</button>
+      </div>
+    </header>
+
+    <main class="stage">
+      <canvas id="app"></canvas>
+      <div id="webgl-fallback" class="webgl-fallback" hidden></div>
+      <aside class="side-panel">
+        <h2 id="explanation-title">دید دور</h2>
+        <p id="explanation-text">بخش بالایی عدسی بیشتر برای دیدن اشیاء دور طراحی شده است.</p>
+        <p id="illustrative" class="illustrative">تصویرسازی آموزشی — ابعاد و توان دقیق عدسی نیست.</p>
+      </aside>
+    </main>
+
+    <footer class="bottombar">
+      <div class="controls">
+        <button id="btn-distance" type="button" class="active">دور</button>
+        <button id="btn-intermediate" type="button">کامپیوتر</button>
+        <button id="btn-near" type="button">مطالعه</button>
+        <button id="btn-gaze" type="button" class="active">نمایش مسیر نگاه</button>
+        <button id="btn-guided" type="button">حالت آموزش گام‌به‌گام</button>
+      </div>
+      <div id="guided-controls" class="guided-controls hidden">
+        <button id="btn-prev" type="button">قبلی</button>
+        <button id="btn-next" type="button">بعدی</button>
+        <button id="btn-restart" type="button">شروع مجدد</button>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
